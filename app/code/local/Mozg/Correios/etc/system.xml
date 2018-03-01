@@ -1,0 +1,877 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config>
+    <sections>
+        <carriers translate="label">
+            <groups>
+                <mozg_correios translate="label" module="mozg_correios">
+                    <label>Correios - (powered by MOZG)</label>
+                    <sort_order>800</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <frontend_model>mozg_base/adminhtml_system_config_fieldset_method</frontend_model>
+                    <activity_path>carriers/mozg_correios/active</activity_path>
+                    <comment><![CDATA[<div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin-bottom:7px;"><p><a href="https://github.com/mozgbrasil/magento-correios-php_71#mozgcorreios" target="_blank">Clique aqui</a> para obter as informações do módulo</p></div>]]>
+                    </comment>
+                    <fields>
+                        <mozg_correios_group_1 type="group" module="mozg_correios" translate="label">
+                            <label>Licenciamento</label>
+                            <expanded>1</expanded>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>10</sort_order>
+                            <fields>
+                                <license translate="label">
+                                    <config_path>carriers/mozg_correios/license</config_path>
+                                    <label>Licença para uso comercial</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71#-" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>textarea</frontend_type>
+                                    <sort_order>18</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </license>
+                                <license_output translate="label">
+                                    <label></label>
+                                    <comment></comment>
+                                    <license_config_path>carriers/mozg_correios/license</license_config_path>
+                                    <method_id>mozg_correios</method_id>
+                                    <frontend_type>text</frontend_type>
+                                    <frontend_model>mozg_base/adminhtml_system_config_form_field_license</frontend_model>
+                                    <sort_order>19</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </license_output>
+                            </fields>
+                        </mozg_correios_group_1>
+                        <mozg_correios_group_2 type="group" module="mozg_correios" translate="label">
+                            <label>Configurações básica nativa</label>
+                            <expanded>1</expanded>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>20</sort_order>
+                            <fields>
+                                <active translate="label,comment">
+                                    <config_path>carriers/mozg_correios/active</config_path>
+                                    <label>Enabled</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-ativar" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>10</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active>
+                                <sort_order translate="label">
+                                    <config_path>carriers/mozg_correios/sort_order</config_path>
+                                    <label>Sort Order</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-ordem-de-exibição" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>20</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </sort_order>
+                                <title translate="label">
+                                    <config_path>carriers/mozg_correios/title</config_path>
+                                    <label>Title</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-título" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>30</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </title>
+                                <allowed_methods translate="label">
+                                    <config_path>carriers/mozg_correios/allowed_methods</config_path>
+                                    <label>Allowed Methods</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-serviços" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>multiselect</frontend_type>
+                                    <source_model>mozg_correios/correios_system_config_source_method</source_model>
+                                    <sort_order>40</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </allowed_methods>
+                                <free_method translate="label">
+                                    <config_path>carriers/mozg_correios/free_method</config_path>
+                                    <label>Free Method</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-serviço-para-entrega-gratuita" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <frontend_class>free-method</frontend_class>
+                                    <source_model>mozg_correios/correios_system_config_source_freemethod</source_model>
+                                    <sort_order>50</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </free_method>
+                                <!--<max_package_weight translate="label">
+                                    <label>Maximum Package Weight (Please consult your shipping carrier for maximum supported shipping weight)</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-peso-máximo-do-pacote" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <validate>validate-number validate-zero-or-greater</validate>
+                                    <sort_order>60</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </max_package_weight>-->
+                                <handling_type translate="label">
+                                    <config_path>carriers/mozg_correios/handling_type</config_path>
+                                    <label>Calculate Handling Fee</label>
+                                     <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-calcular-taxa-de-manuseio" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>shipping/source_handlingType</source_model>
+                                    <sort_order>70</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </handling_type>
+                                <!--<handling_action translate="label">
+                                    <label>Handling Applied</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-aplicar-manuseio" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>shipping/source_handlingAction</source_model>
+                                    <sort_order>80</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </handling_action>-->
+                                <handling_fee translate="label">
+                                    <config_path>carriers/mozg_correios/handling_fee</config_path>
+                                    <label>Handling Fee</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-taxa-de-manuseio" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <!--<validate>validate-number validate-zero-or-greater</validate>-->
+                                    <sort_order>90</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </handling_fee>
+                                <showmethod translate="label">
+                                    <config_path>carriers/mozg_correios/showmethod</config_path>
+                                    <label>Show Method if Not Applicable</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-mostrar-método-se-não-aplicável" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <sort_order>100</sort_order>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </showmethod>
+                                <debug translate="label">
+                                    <config_path>carriers/mozg_correios/debug</config_path>
+                                    <label>Debug</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-debug" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>110</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </debug>
+                                <!--<sallowspecific translate="label">
+                                    <label>Ship to Applicable Countries</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-enviar-para-países-aplicáveis" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>allowspecific</frontend_type>
+                                    <sort_order>120</sort_order>
+                                    <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </sallowspecific>
+                                <specificcountry translate="label">
+                                    <label>Ship to Specific Countries</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-enviar-para-países-específicos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>multiselect</frontend_type>
+                                    <sort_order>130</sort_order>
+                                    <source_model>adminhtml/system_config_source_country</source_model>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <can_be_empty>1</can_be_empty>
+                                </specificcountry>-->
+                            </fields>
+                        </mozg_correios_group_2>
+                        <mozg_correios_group_3 type="group" module="mozg_correios" translate="label">
+                            <label>Configurações Avançadas</label>
+                            <expanded>1</expanded>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>30</sort_order>
+                            <fields>
+                                <product_attribute_width translate="label">
+                                    <config_path>carriers/mozg_correios/product_attribute_width</config_path>
+                                    <label>ID Product Attribute Width</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-identificador-do-atributo-largura-dos-produtos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>220</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </product_attribute_width>
+                                <product_attribute_length translate="label">
+                                    <config_path>carriers/mozg_correios/product_attribute_length</config_path>
+                                    <label>ID Product Attribute Length</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-identificador-do-atributo-comprimento-dos-produtos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>230</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </product_attribute_length>
+                                <product_attribute_height translate="label">
+                                    <config_path>carriers/mozg_correios/product_attribute_height</config_path>
+                                    <label>ID Product Attribute Height</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-identificador-do-atributo-altura-dos-produtos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>240</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </product_attribute_height>
+                                <unit_of_measure translate="label">
+                                    <config_path>carriers/mozg_correios/unit_of_measure</config_path>
+                                    <label>Weight Unit</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-unidade-de-medida" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>mozg_correios/correios_system_config_source_unitMeasure</source_model>
+                                    <sort_order>250</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </unit_of_measure>
+                                <formato_titulo translate="label">
+                                    <config_path>carriers/mozg_correios/formato_titulo</config_path>
+                                    <label>Formato do título</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>260</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </formato_titulo>
+                                <add_prazo translate="label">
+                                    <config_path>carriers/mozg_correios/add_prazo</config_path>
+                                    <label>Adicionar (dias) ao prazo de entrega</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-adicionar-dias-ao-prazo-de-entrega" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>280</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </add_prazo>
+                                <display_result_error translate="label">
+                                    <config_path>carriers/mozg_correios/display_result_error</config_path>
+                                    <label>Mostrar serviço com retorno de erro</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-mostrar-serviço-com-retorno-de-erro" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <sort_order>290</sort_order>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <depends>
+                                        <carriers>
+                                            <mozg_correios>
+                                                <showmethod>1</showmethod>
+                                            </mozg_correios>
+                                        </carriers>
+                                    </depends>
+                                </display_result_error>
+                                <active_tracking translate="label">
+                                    <config_path>carriers/mozg_correios/active_tracking</config_path>
+                                    <label>Ativar rastreamento automático via CRON</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-ativar-rastreamento-automático-via-cron" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <sort_order>300</sort_order>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active_tracking>
+                            </fields>
+                        </mozg_correios_group_3>
+                        <mozg_correios_group_4 type="group" module="mozg_correios" translate="label">
+                            <label>Configurações Correios</label>
+                            <expanded>1</expanded>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>40</sort_order>
+                            <fields>
+                                <mao_propria translate="label">
+                                    <config_path>carriers/mozg_correios/mao_propria</config_path>
+                                    <label>Utilizar Serviço de Mão Própria</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-utilizar-serviço-de-mão-própria" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>530</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </mao_propria>
+                                <aviso_recebimento translate="label">
+                                    <config_path>carriers/mozg_correios/aviso_recebimento</config_path>
+                                    <label>Utilizar Serviço de Aviso de Recebimento</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-utilizar-serviço-de-aviso-de-recebimento" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>540</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </aviso_recebimento>
+                                <valor_declarado translate="label">
+                                    <config_path>carriers/mozg_correios/valor_declarado</config_path>
+                                    <label>Utilizar Serviço de Valor Declarado</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-utilizar-serviço-de-valor-declarado" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>550</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </valor_declarado>
+                            </fields>
+                        </mozg_correios_group_4>
+                        <mozg_correios_group_5 type="group" module="mozg_correios" translate="label">
+                            <label>Configurações para Serviços Com Contrato e SIGEP</label>
+                            <expanded>1</expanded>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>50</sort_order>
+                            <fields>
+                                <cod_admin translate="label">
+                                    <config_path>carriers/mozg_correios/cod_admin</config_path>
+                                    <label><![CDATA[Código Administrativo (Serviços Com Contrato)]]></label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-código-administrativo-junto-à-ect" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>510</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </cod_admin>
+                                <senha_admin translate="label">
+                                    <config_path>carriers/mozg_correios/senha_admin</config_path>
+                                    <label>Senha Administrativa (Serviços Com Contrato)</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-senha-administrativa-dos-correios-serviços-com-contrato" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>obscure</frontend_type>
+                                    <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                                    <sort_order>520</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </senha_admin>
+                            </fields>
+                        </mozg_correios_group_5>
+                        <mozg_correios_group_6 type="group" module="mozg_correios" translate="label">
+                            <label>Configurações para SRO (Sistema de Rastreamento de Objetos)</label>
+                            <expanded>1</expanded>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>60</sort_order>
+                            <fields>
+                                <usuario_sro translate="label">
+                                    <config_path>carriers/mozg_correios/usuario_sro</config_path>
+                                    <label><![CDATA[Usuário]]></label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>510</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </usuario_sro>
+                                <senha_sro translate="label">
+                                    <config_path>carriers/mozg_correios/senha_sro</config_path>
+                                    <label>Senha</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-senha-administrativa-dos-correios-serviços-com-contrato" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>obscure</frontend_type>
+                                    <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                                    <sort_order>520</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </senha_sro>
+                            </fields>
+                        </mozg_correios_group_6>
+                        <mozg_correios_group_7 type="group" module="mozg_correios" translate="label">
+                            <label>Configurações SIGEP</label>
+                            <expanded>1</expanded>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>70</sort_order>
+                            <fields>
+                                <is_sandbox translate="label,comment">
+                                    <config_path>carriers/mozg_correios/is_sandbox</config_path>
+                                    <label>Ambiente de teste</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-ambiente-de-teste" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>10</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </is_sandbox>
+                                <usuario translate="label">
+                                    <config_path>carriers/mozg_correios/usuario</config_path>
+                                    <label><![CDATA[Usuário]]></label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-usu%C3%A1rio-administrativa-dos-correios-servi%C3%A7os-com-contrato" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>20</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </usuario>
+                                <senha translate="label">
+                                    <config_path>carriers/mozg_correios/senha</config_path>
+                                    <label><![CDATA[Senha]]></label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-senha-administrativa-dos-correios-servi%C3%A7os-com-contrato-1" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>obscure</frontend_type>
+                                    <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                                    <sort_order>30</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </senha>
+                                <cod_administrativo translate="label">
+                                    <config_path>carriers/mozg_correios/cod_administrativo</config_path>
+                                    <label><![CDATA[Código Administrativo]]></label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-c%C3%B3digo-administrativo-junto-%C3%A0-ect-1" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>40</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </cod_administrativo>
+                                <numero_contrato translate="label">
+                                    <config_path>carriers/mozg_correios/numero_contrato</config_path>
+                                    <label><![CDATA[Número do contrato]]></label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-n%C3%BAmero-do-contrato" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>50</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </numero_contrato>
+                                <cartao_postagem translate="label">
+                                    <config_path>carriers/mozg_correios/cartao_postagem</config_path>
+                                    <label><![CDATA[Cartão de postagem]]></label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-cart%C3%A3o-de-postagem" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>60</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </cartao_postagem>
+                                <cnpj translate="label">
+                                    <config_path>carriers/mozg_correios/cnpj</config_path>
+                                    <label><![CDATA[C.N.P.J.]]></label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-cnpj" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>70</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </cnpj>
+                                <diretoria translate="label">
+                                    <config_path>carriers/mozg_correios/diretoria</config_path>
+                                    <label>Diretória</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-diret%C3%B3ria" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>mozg_correios/correios_system_config_source_diretoria</source_model>
+                                    <sort_order>250</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </diretoria>
+                                <logo_etiqueta translate="label comment">
+                                    <config_path>carriers/mozg_correios/logo_etiqueta</config_path>
+                                    <label>Logo</label>
+                                    <comment>Allowed file types: jpeg, gif, png.</comment>
+                                    <frontend_type>image</frontend_type>
+                                    <backend_model>adminhtml/system_config_backend_image</backend_model>
+                                    <upload_dir config="system/filesystem/media" scope_info="1">theme</upload_dir>
+                                    <base_url type="media" scope_info="1">theme</base_url>
+                                    <sort_order>260</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </logo_etiqueta>
+                                <servico_de_postagem translate="label">
+                                    <config_path>carriers/mozg_correios/servico_de_postagem</config_path>
+                                    <label><![CDATA[Serviço de Postagem]]></label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-servi%C3%A7o-de-postagem" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>270</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </servico_de_postagem>
+                                <update_allowed_methods>
+                                    <config_path>carriers/mozg_correios/update_allowed_methods</config_path>
+                                    <label>Atualizar serviços com contrato</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>button</frontend_type>
+                                    <frontend_model>mozg_correios/adminhtml_system_config_form_button</frontend_model>
+                                    <sort_order>280</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </update_allowed_methods>
+                            </fields>
+                        </mozg_correios_group_7>
+                     </fields>
+                </mozg_correios>
+                <mozg_correios_exportafacil translate="label" module="mozg_correios">
+                    <label>Correios Exporta Fácil - (powered by MOZG)</label>
+                    <sort_order>810</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <frontend_model>mozg_base/adminhtml_system_config_fieldset_method</frontend_model>
+                    <activity_path>carriers/mozg_correios_exportafacil/active</activity_path>
+                    <comment>
+                          <![CDATA[<div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin-bottom:7px;"><p><a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#mozgcorreios" target="_blank">Clique aqui</a> para obter as informações do módulo</p></div>]]>
+                    </comment>
+                    <fields>
+                        <!--<mozg_correios_exportafacil_group_1 type="group" translate="label comment tooltip" module="mozg_correios">
+                            <label>Licenciamento</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>10</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <license translate="label">
+                                    <label>Licença para uso comercial</label>
+                                    <comment></comment>
+                                    <frontend_type>textarea</frontend_type>
+                                    <config_path>carriers/mozg_correios/license</config_path>
+                                    <sort_order>8</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </license>
+                                <license_output translate="label">
+                                    <label></label>
+                                    <comment></comment>
+                                    <license_config_path>carriers/mozg_correios/license</license_config_path>
+                                    <method_id>mozg_correios</method_id>
+                                    <frontend_type>text</frontend_type>
+                                    <frontend_model>mozg_base/adminhtml_system_config_form_field_license</frontend_model>
+                                    <sort_order>9</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </license_output>
+                            </fields>
+                        </mozg_correios_exportafacil_group_1>-->
+                        <mozg_correios_exportafacil_group_2 type="group" translate="label comment tooltip" module="mozg_correios">
+                            <label>Configurações básica nativa</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>200</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <active translate="label,comment">
+                                    <label>Enabled</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-ativar" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>carriers/mozg_correios_exportafacil/active</config_path>
+                                    <sort_order>10</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active>
+                                <sort_order translate="label">
+                                    <label>Sort Order</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-ordem-de-exibição" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/sort_order</config_path>
+                                    <sort_order>20</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </sort_order>
+                                <title translate="label">
+                                    <label>Title</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-título" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/title</config_path>
+                                    <sort_order>30</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </title>
+                                <allowed_methods translate="label">
+                                    <label>Allowed Methods</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-serviços" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>multiselect</frontend_type>
+                                    <source_model>mozg_correios/correiosexportafacil_system_config_source_method</source_model>
+                                    <config_path>carriers/mozg_correios_exportafacil/allowed_methods</config_path>
+                                    <sort_order>40</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </allowed_methods>
+                                <free_method translate="label">
+                                    <label>Free Method</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-serviço-para-entrega-gratuita" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/free_method</config_path>
+                                    <frontend_class>free-method</frontend_class>
+                                    <source_model>mozg_correios/correiosexportafacil_system_config_source_freemethod</source_model>
+                                    <sort_order>50</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </free_method>
+                                <!--<max_package_weight translate="label">
+                                    <label>Maximum Package Weight (Please consult your shipping carrier for maximum supported shipping weight)</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-peso-máximo-do-pacote" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/max_package_weight</config_path>
+                                    <validate>validate-number validate-zero-or-greater</validate>
+                                    <sort_order>60</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </max_package_weight>-->
+                                <handling_type translate="label">
+                                    <label>Calculate Handling Fee</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-calcular-taxa-de-manuseio" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>shipping/source_handlingType</source_model>
+                                    <config_path>carriers/mozg_correios_exportafacil/handling_type</config_path>
+                                    <sort_order>70</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </handling_type>
+                                <!--<handling_action translate="label">
+                                    <label>Handling Applied</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-aplicar-manuseio" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>shipping/source_handlingAction</source_model>
+                                    <config_path>carriers/mozg_correios_exportafacil/handling_action</config_path>
+                                    <sort_order>80</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </handling_action>-->
+                                <handling_fee translate="label">
+                                    <label>Handling Fee</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-taxa-de-manuseio" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/handling_fee</config_path>
+                                    <validate>validate-number validate-zero-or-greater</validate>
+                                    <sort_order>90</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </handling_fee>
+                                <showmethod translate="label">
+                                    <label>Show Method if Not Applicable</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-mostrar-método-se-não-aplicável" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/showmethod</config_path>
+                                    <sort_order>100</sort_order>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </showmethod>
+                                <debug translate="label">
+                                    <label>Debug</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-debug" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/debug</config_path>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>110</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </debug>
+                                <sallowspecific translate="label">
+                                    <label>Ship to Applicable Countries</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-enviar-para-países-aplicáveis" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>allowspecific</frontend_type>
+                                    <sort_order>120</sort_order>
+                                    <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                                    <config_path>carriers/mozg_correios_exportafacil/sallowspecific</config_path>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </sallowspecific>
+                                <specificcountry translate="label">
+                                    <label>Ship to Specific Countries</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-enviar-para-países-específicos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>multiselect</frontend_type>
+                                    <sort_order>130</sort_order>
+                                    <source_model>adminhtml/system_config_source_country</source_model>
+                                    <config_path>carriers/mozg_correios_exportafacil/specificcountry</config_path>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <can_be_empty>1</can_be_empty>
+                                </specificcountry>
+                            </fields>
+                        </mozg_correios_exportafacil_group_2>
+                        <mozg_correios_exportafacil_group_3 type="group" translate="label comment tooltip" module="mozg_correios">
+                            <label>Configurações Avançadas</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>30</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <product_attribute_width translate="label">
+                                    <label>ID Product Attribute Width</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-identificador-do-atributo-largura-dos-produtos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/product_attribute_width</config_path>
+                                    <sort_order>220</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </product_attribute_width>
+                                <product_attribute_length translate="label">
+                                    <label>ID Product Attribute Length</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-identificador-do-atributo-comprimento-dos-produtos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/product_attribute_length</config_path>
+                                    <sort_order>230</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </product_attribute_length>
+                                <product_attribute_height translate="label">
+                                    <label>ID Product Attribute Height</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_Correios.md#-identificador-do-atributo-altura-dos-produtos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/product_attribute_height</config_path>
+                                    <sort_order>240</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </product_attribute_height>
+                                <unit_of_measure translate="label">
+                                    <label>Weight Unit</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-unidade-de-medida" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>mozg_correios/correios_system_config_source_unitMeasure</source_model>
+                                    <config_path>carriers/mozg_correios_exportafacil/unit_of_measure</config_path>
+                                    <sort_order>250</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </unit_of_measure>
+                                <prazo_entrega translate="label">
+                                    <label>Exibir Prazo de Entrega</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-exibir-prazo-de-entrega" target="_blank">__?__</a>]]></comment>
+                                     <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>carriers/mozg_correios_exportafacil/prazo_entrega</config_path>
+                                    <sort_order>260</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </prazo_entrega>
+                                <msgprazo translate="label">
+                                    <label>Mensagem que Exibe o Prazo de Entrega</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-mensagem-que-exibe-o-prazo-de-entrega" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/msgprazo</config_path>
+                                    <sort_order>270</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <depends><prazo_entrega>1</prazo_entrega></depends>
+                                </msgprazo>
+                                <add_prazo translate="label">
+                                    <label>Adicionar (dias) ao prazo de entrega</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-adicionar-dias-ao-prazo-de-entrega" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/add_prazo</config_path>
+                                    <sort_order>280</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <depends><prazo_entrega>1</prazo_entrega></depends>
+                                </add_prazo>
+                                <display_result_error translate="label">
+                                    <label>Mostrar serviço com retorno de erro</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-mostrar-serviço-com-retorno-de-erro" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <sort_order>290</sort_order>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>carriers/mozg_correios_exportafacil/display_result_error</config_path>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <depends><showmethod>1</showmethod></depends>
+                                </display_result_error>
+                            </fields>
+                        </mozg_correios_exportafacil_group_3>
+                        <mozg_correios_exportafacil_group_4 type="group" translate="label comment tooltip" module="mozg_correios">
+                            <label>Configurações para integração</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>40</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <estado_origem translate="label">
+                                    <label>Sigla do Estado de origem</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-sigla-do-estado-de-origem" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/estado_origem</config_path>
+                                    <sort_order>510</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </estado_origem>
+                                <localidade translate="label">
+                                    <label>Identificar se foi postado na Capital (C) ou no Interior ( I ) do Estado</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-correios-php_71/blob/master/README_ExportaFacil.md#-identificar-se-foi-postado-na-capital-c-ou-no-interior--i--do-estado" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>carriers/mozg_correios_exportafacil/localidade</config_path>
+                                    <sort_order>520</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </localidade>
+                            </fields>
+                        </mozg_correios_exportafacil_group_4>
+                     </fields>
+                </mozg_correios_exportafacil>
+            </groups>
+        </carriers>
+    </sections>
+</config>

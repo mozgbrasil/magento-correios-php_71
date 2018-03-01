@@ -1,0 +1,14 @@
+## Modman Module Mozg
+app/code/local/Mozg/Correios/	app/code/local/Mozg/Correios/
+app/design/adminhtml/default/default/layout/mozg_correios.xml	app/design/adminhtml/default/default/layout/mozg_correios.xml
+app/design/adminhtml/default/default/template/mozg_correios/	app/design/adminhtml/default/default/template/mozg_correios/
+app/design/frontend/base/default/layout/mozg_correios.xml	app/design/frontend/base/default/layout/mozg_correios.xml
+app/design/frontend/base/default/template/mozg_correios/	app/design/frontend/base/default/template/mozg_correios/
+app/etc/modules/Mozg_Correios.xml	app/etc/modules/Mozg_Correios.xml
+app/locale/pt_BR/Mozg_Correios.csv	app/locale/pt_BR/Mozg_Correios.csv
+js/mozg_correios/	js/mozg_correios/
+skin/adminhtml/default/default/images/mozg_correios/	skin/adminhtml/default/default/images/mozg_correios/
+skin/frontend/base/default/css/mozg_correios/	skin/frontend/base/default/css/mozg_correios/
+skin/frontend/base/default/images/mozg_correios/	skin/frontend/base/default/images/mozg_correios/
+media/theme/default/logo-etiqueta-2016.png		media/theme/default/logo-etiqueta-2016.png
+mozg/correios/data/servicos_sem_contrato.csv mozg/correios/data/servicos_sem_contrato.csv

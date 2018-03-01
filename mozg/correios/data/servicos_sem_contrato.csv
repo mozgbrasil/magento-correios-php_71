@@ -1,0 +1,24 @@
+false,85480,x,Aerograma
+false,10014,x,Carta Registrada
+false,10030,x,Carta Simples
+false,68233,x,Carta Via Internet
+false,16012,x,Cartão Postal
+false,20010,x,Impresso Normal
+false,14036,x,Mala Direta Domiciliária
+false,14010,x,Mala Direta Não Urgente
+false,14028,x,Mala Direta/Impresso Urgente
+false,31283,x,Correios Entrega Direta Operação B
+false,44105,x,Malote
+false,43010,x,Reembolso Postal
+false,81019,x,e-SEDEX
+false,41106,x,PAC
+true,41300,x,PAC Grandes Formatos
+true,41262,x,PAC Pagamento na Entrega
+false,40010,x,SEDEX
+true,40215,104707,"SEDEX 10"
+true,40169,115218,"SEDEX 12"
+true,40290,108934,"SEDEX HOJE"
+true,40819,x,SEDEX Pagamento na Entrega
+true,04014,104295,"SEDEX"
+true,40045,x,"SEDEX a Cobrar"
+true,04510,110353,"PAC"
